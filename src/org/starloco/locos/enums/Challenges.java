@@ -1,0 +1,102 @@
+package org.starloco.locos.enums;
+
+public enum Challenges {
+    ZOMBIE(1),
+    STATUE(2),
+    DESIGNE_VOLONTAIRE(3),
+    SURIS(4),
+    ECONOME(5),
+    VERSATILE(6),
+    JARDINIER(7),
+    NOMADE(8),
+    BARBARE(9),
+    CRUEL(10),
+    MYSTIQUE(11),
+    FOSSOYEUR(12),
+    CASINO_ROYAL(14),
+    ARAKNOPHILE(15),
+    INTOUCHABLE(17),
+    INCURABLE(18),
+    MAINS_PROPRES(19),
+    ELEMENTAIRE(20),
+    CIRCULEZ(21),
+    LE_TEMPS_QUI_COURT(22),
+    PERDU_DE_VUE(23),
+    BORNE(24),
+    ORDONNE(25),
+    NI_PIOUTES_NI_SOUMISES(28),
+    NI_PIOUS_NI_SOUMIS(29),
+    LES_PETITS_D_ABORD(30),
+    FOCUS(31),
+    ELITISTE(32),
+    SURVIVANT(33),
+    IMPREVISIBLE(34),
+    TUEUR_A_GAGES(35),
+    HARDI(36),
+    COLLANT(37),
+    BLITZKRIEG(38),
+    ANACHORETE(39),
+    PUSILLANIME(40),
+    PETULANT(41),
+    DEUX_POUR_LE_PRIX_D_UN(42),
+    ABNEGATION(43),
+    PARTAGE(44),
+    DUEL(45),
+    CHACUN_SON_MONSTRE(46),
+    CONTAMINATION(47),
+    LES_MULES_D_ABORD(48),
+    PROTEGEZ_VOS_MULES(49),
+    LE_CHEAT_DES_DEVS(50),
+    ZOMBIE_DUPLICATE(51),
+    STATUE_DUPLICATE(52),
+    DESIGNE_VOLONTAIRE_DUPLICATE(53),
+    SURIS_DUPLICATE(54),
+    VERSATILE_DUPLICATE(55),
+    JARDINIER_DUPLICATE(56),
+    NOMADE_DUPLICATE(57),
+    CRUEL_DUPLICATE(59),
+    MYSTIQUE_DUPLICATE(60),
+    FOSSOYEUR_DUPLICATE(61),
+    ARAKNOPHILE_DUPLICATE(63),
+    INTOUCHABLE_DUPLICATE(64),
+    INCURABLE_DUPLICATE(65),
+    PERDU_DE_VUE_DUPLICATE(66),
+    ORDONNE_DUPLICATE(68),
+    NI_PIOUTES_NI_SOUMISES_DUPLICATE(69),
+    NI_PIOUS_NI_SOUMIS_DUPLICATE(70),
+    FOCUS_DUPLICATE(71),
+    ELITISTE_DUPLICATE(72),
+    SURVIVANT_DUPLICATE(73),
+    IMPREVISIBLE_DUPLICATE(74),
+    TUEUR_A_GAGES_DUPLICATE(75),
+    HARDI_DUPLICATE(76),
+    COLLANT_DUPLICATE(77),
+    ANACHORETE_DUPLICATE(79),
+    PUSILLANIME_DUPLICATE(80),
+    PETULANT_DUPLICATE(81),
+    DEUX_POUR_LE_PRIX_D_UN_DUPLICATE(82),
+    ABNEGATION_DUPLICATE(83),
+    PARTAGE_DUPLICATE(84),
+    DUEL_DUPLICATE(85),
+    CHACUN_SON_MONSTRE_DUPLICATE(86),
+    CONTAMINATION_DUPLICATE(87);
+
+    private final int id;
+
+    Challenges(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public static Challenges getById(int id) {
+        for (Challenges challenge : Challenges.values()) {
+            if (challenge.getId() == id) {
+                return challenge;
+            }
+        }
+        throw new IllegalArgumentException("No Challenges found with id: " + id);
+    }
+}
